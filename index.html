@@ -5,42 +5,322 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link rel="stylesheet" href="css/style.css">
     <title>prestige properties</title>
 </head>
-<body class="px-2 py-4 bg-slate-400 overflow-x-hidden">
-    
-    <nav class=" md:flex md:justify-between ">
-        <img src="assets/logo2.png" alt="logo" class="rounded-md h-12 cursor-pointer mb-2">
+<body class="">
+        
+    <!-- Navbar -->
+    <nav class="bg-black md:bg-white p-2">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="logo">
+                <img src="assets/logo2.png" class="h-12" alt="logo">
+            </div>
 
-        <div class="menu mt-2">
-            <ul class="font-semibold flex gap-4">
-                <li class="cursor-pointer hover:text-gray-400">HOME</li>
-                <li class="cursor-pointer hover:text-gray-400">ABOUT</li>
-                <li class="cursor-pointer hover:text-gray-400">CONTACT</li>
-                <li class="cursor-pointer hover:text-gray-400">TESTIMONIALS</li>
-                <li class="cursor-pointer hover:text-gray-400">BLOG</li>
-            </ul>
-        </div>
+            <!-- Hamburger Icon -->
+            <div class="block lg:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
 
-        <div class="cta mt-2 ">
-              <a href="/" class="mr-3 border-2 p-2 rounded-md hover:bg-gray-200 ">
-                     <button class="font-semibold">CALL US</button>
+            <!-- Links for Desktop -->
+            <div class="hidden lg:flex space-x-4">
+                <a href="#" class="text-black font-mono font-semibold tracking-wider hover:text-gray-500">HOME</a>
+                <a href="#" class="text-black font-mono font-semibold tracking-wider hover:text-gray-500">ABOUT</a>
+                <a href="#" class="text-black font-mono font-semibold tracking-wider hover:text-gray-500">SERVICES</a>
+                <a href="#" class="text-black font-mono font-semibold tracking-wider hover:text-gray-500">CONTACT</a>
+            </div>
+
+
+
+            <div class="hidden lg:flex space-x-4">
+                <a href="/" class="font-mono px-4 py-1 border-gray-400 border-2 rounded-md hover:bg-gray-200">
+                    <button class="">CALL NOW</button>
                 </a>
+                <a href="/" class=" bg-black px-4 py-1 text-white rounded-md hover:bg-gray-200 hover:text-black">
+                    <button class="">INSPECT NOW</button>
+                </a>
+            </div>
 
-             <a href="/" class="bg-black text-white p-2 rounded-md hover:bg-gray-200 hover:text-black ">
-             <button class="font-semibold">INSPECT NOW</button>
-             </a>
+              
         </div>
+        </div>
+
       
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden menu-hidden bg-black text-white">
+            <a href="#" class="block px-4 py-2">Home</a>
+            <a href="#" class="block px-4 py-2">About</a>
+            <a href="#" class="block px-4 py-2">Services</a>
+            <a href="#" class="block px-4 py-2">Contact</a>
+        </div>
     </nav>
     <hr>
+ 
+    <div class="mt-4 mb-5 space-x-4 lg:hidden flex justify-center">
+        <a href="/" class="font-mono px-4 py-1 border-gray-400 border-2 rounded-md hover:bg-gray-200">
+            <button class="">CALL NOW</button>
+        </a>
+        <a href="/" class=" bg-black px-4 py-1 text-white rounded-md hover:bg-gray-200 hover:text-black">
+            <button class="">INSPECT NOW</button>
+        </a>
+    </div>    
 
-    <div class="hero">
-        <div class="hero-text">
-            <p>GET YOUR</p>
-            <h1>AFFORDABLE | LEGIT | STRESSFREE</h1>
-            <p>HOMES & PROPERTIES</p>
+    <div class="container mx-auto my-2">
+        <!-- Carousel Container -->
+        <div class="relative w-full overflow-hidden">
+            <!-- Carousel Images with Text -->
+            <div id="carousel" class="flex transition-transform duration-500">
+                <!-- Slide 1 -->
+                <div class="w-full flex-shrink-0 relative">
+                    <img src="./assets/Screenshot_2024-07-31-15-35-55-440_com.android.chrome.jpg" alt="Slide 1" class="w-full">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center">
+                        <h2 class="text-white md:text-4xl font-bold font-mono text-center">Welcome To Prestige Homes <br>
+                            <span class="font-mono font-extralight text-gray-200">Where you can get you dream homes</span>
+                        </h2>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="w-full flex-shrink-0 relative">
+                    <img src="./assets/man.png" alt="Slide 2" class="w-full">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center">
+                            <h2 class="text-white md:text-4xl font-bold font-mono text-center">Own a Home With Prestige Homes <br>
+                                <span class="font-mono font-extralight text-gray-200">At best price and complete documents</span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="w-full flex-shrink-0 relative">
+                    <img src="./assets/lan1.png" alt="Slide 3" class="w-full">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center">
+                            <h2 class="text-white md:text-4xl font-bold font-mono text-center">Own Legit Landed properties With Us <br>
+                                <span class="font-mono font-extralight text-gray-200">Our Lands comes with C of O's</span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Previous and Next Buttons -->
+            <button id="prev" class="absolute top-1/2 transform -translate-y-1/2 left-4 bg-gray-800 text-white p-2 rounded-full">
+                &#10094;
+            </button>
+            <button id="next" class="absolute top-1/2 transform -translate-y-1/2 right-4 bg-gray-800 text-white p-2 rounded-full">
+                &#10095;
+            </button>
         </div>
     </div>
+
+
+    <div class="mt-8 mb-12 space-x-4 md:space-x-16 flex justify-center">
+        <a href="/" class="font-mono md:px-6  px-4 py-1 border-gray-400 border-2 rounded-md hover:bg-gray-200">
+            <button class=" md:text-2xl">CALL NOW</button>
+        </a>
+        <a href="/" class=" bg-black md:px-6 px-4 py-1 text-white rounded-md hover:bg-gray-200 hover:text-black">
+            <button class="md:text-2xl">INSPECT NOW</button>
+        </a>
+    </div>  
+
+
+    <div>
+        <h1 class="text-center font-mono ">AVAILABLE PROPERTIES</h1>
+        <h1 class="text-center font-mono font-semibold md:text-3xl mb-6 "> | HOMES | LOCATION | SPECS |</h1>
+
+        <div class="homes md:grid md:grid-cols-3 md:ml-6">
+            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white ml-4 mt-8">
+                <img class="w-full" src="./assets/hos.png" alt="Sunset in the mountains">
+                <div class="px-2 py-3">
+                    <div class="font-extrabold text-xl font-mono ">Two Bed room | Gurratop rayfield</div>
+                    <p class="text-gray-700 text-base">
+                        It is seating on 2 (two) plots of land with 3 toilets and a kitchen fully 
+                        fenced and a gate running water
+                    </p>
+                </div>
+                <div class="px-2  pb-2">
+                    <span class="inline-block bg-blue-200 rounded-lg px-3 py-1 text-sm font-semibold text-blue-700 mr-2 mb-2">#15 hours power supply</span>
+                    <span class="inline-block bg-green-200 rounded-lg px-3 py-1 text-sm font-semibold text-green-700 mr-2 mb-2">#security</span>
+                    <span class="inline-block bg-yellow-200 rounded-lg px-3 py-1 text-sm font-semibold text-yellow-700 mr-2 mb-2">#seran</span>
+                </div>
+            </div>
+
+
+
+            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white ml-4 mt-8 ">
+                <img class="w-full" src="./assets/twin.png" alt="Sunset in the mountains">
+                <div class="px-2 py-3">
+                    <div class="font-extrabold text-xl font-mono ">Two Bed room | Gurratop rayfield</div>
+                    <p class="text-gray-700 text-base">
+                        It is seating on 2 (two) plots of land with 3 toilets and a kitchen fully 
+                        fenced and a gate running water
+                    </p>
+                </div>
+                <div class="px-2  pb-2">
+                    <span class="inline-block bg-blue-200 rounded-lg px-3 py-1 text-sm font-semibold text-blue-700 mr-2 mb-2">#15 hours power supply</span>
+                    <span class="inline-block bg-green-200 rounded-lg px-3 py-1 text-sm font-semibold text-green-700 mr-2 mb-2">#security</span>
+                    <span class="inline-block bg-yellow-200 rounded-lg px-3 py-1 text-sm font-semibold text-yellow-700 mr-2 mb-2">#seran</span>
+                </div>
+            </div>
+
+
+
+            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white ml-4 mt-8 ">
+                <img class="w-full" src="./assets/water.png" alt="Sunset in the mountains">
+                <div class="px-2 py-3">
+                    <div class="font-extrabold text-xl font-mono ">Two Bed room | Gurratop rayfield</div>
+                    <p class="text-gray-700 text-base">
+                        It is seating on 2 (two) plots of land with 3 toilets and a kitchen fully 
+                        fenced and a gate running water
+                    </p>
+                </div>
+                <div class="px-2  pb-2">
+                    <span class="inline-block bg-blue-200 rounded-lg px-3 py-1 text-sm font-semibold text-blue-700 mr-2 mb-2">#15 hours power supply</span>
+                    <span class="inline-block bg-green-200 rounded-lg px-3 py-1 text-sm font-semibold text-green-700 mr-2 mb-2">#security</span>
+                    <span class="inline-block bg-yellow-200 rounded-lg px-3 py-1 text-sm font-semibold text-yellow-700 mr-2 mb-2">#seran</span>
+                </div>
+            </div>
+
+
+            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white ml-4 mt-8 ">
+                <img class="w-full" src="./assets/hos.png" alt="Sunset in the mountains">
+                <div class="px-2 py-3">
+                    <div class="font-extrabold text-xl font-mono ">Two Bed room | Gurratop rayfield</div>
+                    <p class="text-gray-700 text-base">
+                        It is seating on 2 (two) plots of land with 3 toilets and a kitchen fully 
+                        fenced and a gate running water
+                    </p>
+                </div>
+                <div class="px-2  pb-2">
+                    <span class="inline-block bg-blue-200 rounded-lg px-3 py-1 text-sm font-semibold text-blue-700 mr-2 mb-2">#15 hours power supply</span>
+                    <span class="inline-block bg-green-200 rounded-lg px-3 py-1 text-sm font-semibold text-green-700 mr-2 mb-2">#security</span>
+                    <span class="inline-block bg-yellow-200 rounded-lg px-3 py-1 text-sm font-semibold text-yellow-700 mr-2 mb-2">#seran</span>
+                </div>
+            </div>
+
+
+            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white ml-4 mt-8 ">
+                <img class="w-full" src="./assets/hos2.png" alt="Sunset in the mountains">
+                <div class="px-2 py-3">
+                    <div class="font-extrabold text-xl font-mono ">Two Bed room | Gurratop rayfield</div>
+                    <p class="text-gray-700 text-base">
+                        It is seating on 2 (two) plots of land with 3 toilets and a kitchen fully 
+                        fenced and a gate running water
+                    </p>
+                </div>
+                <div class="px-2  pb-2">
+                    <span class="inline-block bg-blue-200 rounded-lg px-3 py-1 text-sm font-semibold text-blue-700 mr-2 mb-2">#15 hours power supply</span>
+                    <span class="inline-block bg-green-200 rounded-lg px-3 py-1 text-sm font-semibold text-green-700 mr-2 mb-2">#security</span>
+                    <span class="inline-block bg-yellow-200 rounded-lg px-3 py-1 text-sm font-semibold text-yellow-700 mr-2 mb-2">#seran</span>
+                </div>
+            </div>
+
+
+            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white ml-4 mt-8 ">
+                <img class="w-full" src="./assetS/twin.png" alt="Sunset in the mountains">
+                <div class="px-2 py-3">
+                    <div class="font-extrabold text-xl font-mono ">Two Bed room | Gurratop rayfield</div>
+                    <p class="text-gray-700 text-base">
+                        It is seating on 2 (two) plots of land with 3 toilets and a kitchen fully 
+                        fenced and a gate running water
+                    </p>
+                </div>
+                <div class="px-2  pb-2">
+                    <span class="inline-block bg-blue-200 rounded-lg px-3 py-1 text-sm font-semibold text-blue-700 mr-2 mb-2">#15 hours power supply</span>
+                    <span class="inline-block bg-green-200 rounded-lg px-3 py-1 text-sm font-semibold text-green-700 mr-2 mb-2">#security</span>
+                    <span class="inline-block bg-yellow-200 rounded-lg px-3 py-1 text-sm font-semibold text-yellow-700 mr-2 mb-2">#seran</span>
+                </div>
+            </div>
+        </div>     
+    </div>
+
+    <h1 class="text-center font-mono mt-8 ">AVAILABLE PROPERTIES</h1>
+    <h1 class="text-center font-mono font-semibold md:text-3xl mb-6 "> | LANDS | LOCATION | SPECS |</h1>
+
+    <div class="lands md:grid md:grid-cols-3 md:ml-6">
+        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white ml-4 mt-8">
+            <img class="w-full" src="./assets/lan2.png" alt="Sunset in the mountains">
+            <div class="px-2 py-3">
+                <div class="font-extrabold text-xl font-mono ">Two Arces | Gurratop rayfield</div>
+                <p class="text-gray-700 text-base">
+                    It is seating on 2 (two) plots of land with 3 toilets and a kitchen fully 
+                    fenced and a gate running water
+                </p>
+            </div>
+            <div class="px-2  pb-2">
+                <span class="inline-block bg-blue-200 rounded-lg px-3 py-1 text-sm font-semibold text-blue-700 mr-2 mb-2">#15 hours power supply</span>
+                <span class="inline-block bg-green-200 rounded-lg px-3 py-1 text-sm font-semibold text-green-700 mr-2 mb-2">#security</span>
+                <span class="inline-block bg-yellow-200 rounded-lg px-3 py-1 text-sm font-semibold text-yellow-700 mr-2 mb-2">#seran</span>
+            </div>
+        </div>
+
+
+        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white ml-4 mt-8">
+            <img class="w-full" src="./assets/lan1.png" alt="Sunset in the mountains">
+            <div class="px-2 py-3">
+                <div class="font-extrabold text-xl font-mono ">10 plots | Gurratop rayfield</div>
+                <p class="text-gray-700 text-base">
+                    It is seating on 2 (two) plots of land with 3 toilets and a kitchen fully 
+                    fenced and a gate running water
+                </p>
+            </div>
+            <div class="px-2  pb-2">
+                <span class="inline-block bg-blue-200 rounded-lg px-3 py-1 text-sm font-semibold text-blue-700 mr-2 mb-2">#15 hours power supply</span>
+                <span class="inline-block bg-green-200 rounded-lg px-3 py-1 text-sm font-semibold text-green-700 mr-2 mb-2">#security</span>
+                <span class="inline-block bg-yellow-200 rounded-lg px-3 py-1 text-sm font-semibold text-yellow-700 mr-2 mb-2">#seran</span>
+            </div>
+        </div>
+
+
+
+        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white ml-4 mt-8">
+            <img class="w-full" src="./assets/lan2.png" alt="Sunset in the mountains">
+            <div class="px-2 py-3">
+                <div class="font-extrabold text-xl font-mono ">3 plots  | Gurratop rayfield</div>
+                <p class="text-gray-700 text-base">
+                    It is seating on 2 (two) plots of land with 3 toilets and a kitchen fully 
+                    fenced and a gate running water
+                </p>
+            </div>
+            <div class="px-2  pb-2">
+                <span class="inline-block bg-blue-200 rounded-lg px-3 py-1 text-sm font-semibold text-blue-700 mr-2 mb-2">#15 hours power supply</span>
+                <span class="inline-block bg-green-200 rounded-lg px-3 py-1 text-sm font-semibold text-green-700 mr-2 mb-2">#security</span>
+                <span class="inline-block bg-yellow-200 rounded-lg px-3 py-1 text-sm font-semibold text-yellow-700 mr-2 mb-2">#seran</span>
+            </div>
+        </div>
+    </div>
+
+
+    <h1 class="text-center font-mono mt-8 ">ENQUIRIES</h1>
+    <h1 class="text-center font-mono font-semibold md:text-3xl mb-6 "> HOW IT WORKS ?</h1>
+
+    <div class="htw flex justify-center">
+          <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white ml-4  md:max-w-4xl">
+        <div class="px-2 py-2">
+            <!-- <div class="font-extrabold text-xl font-mono ">Two Arces | Gurratop rayfield</div> -->
+            <p class="text-gray-700 text-base">
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                 elit. Corporis nulla ullam numquam aperiam ducimus, 
+                 fugiat blanditiis eveniet officiis dolore, laudantium repellendus neque eos?
+                 Voluptates deleniti exercitationem molestias cumque adipisci! Voluptatem.
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio hic 
+                 cum incidunt vitae soluta omnis modi nemo, excepturi qui impedit
+                 ! Deserunt voluptatibus aliquid pariatur possimus alias, neque q
+                 uasi omnis eligendi.
+            </p>
+        </div>
+      
+    </div>
+
+    </div>
+    <div class="logo ml-4 mt-4 flex justify-center pb-4">
+        <img src="assets/logo2.png" class="h-12" alt="logo">
+    </div>
+    <script src="JS/script.js"></script>
 </body>
 </html>

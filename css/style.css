@@ -1,0 +1,16 @@
+        /* Custom transition for menu */
+        .menu-hidden {
+            display: none;
+        }
+        .menu-visible {
+            display: block;
+        }
+      
+        /* hero-img{
+            background-image:url('../assets/Screenshot_2024-07-31-15-35-55-440_com.android.chrome.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 70vh;
+
+        } */
